@@ -37,18 +37,26 @@ mkdir home/you_user_name/hackathon2022
 ```
 Unpack solution *hackathon_solution.tar* from cloned project directory to the solution directory *hackathon2022* you just made. This directory will be mounted as volume when you start docker container.
 
-Download image from https://github.com/typhoon-hil/hackathon2022/releases/download/test_release2/uegos-docker-image.tar then open power shell in a directory where the image is downloaded. Load it in Docker and start it. To load the image and start it, follow these commands.
+Download image from https://github.com/typhoon-hil/hackathon2022/releases/download/test_release2/uegos-docker-image.tar. Open power shell in a directory where the image is downloaded. Load it in Docker and start it. To load the image and start it, follow these commands.
 If you are on Windows:
 ``` shell
 docker load --input uegos-docker-image.tar
+```
+``` shell
 docker run -e MONGO_INITDB_ROOT_USERNAME=uegos -e MONGO_INITDB_ROOT_PASSWORD=uegos -e MONGO_INITDB_DATABASE=uegos --name uegos-db -d mongo
+```
+``` shell
 docker run --link uegos-db -p 8080:8080 -v c:/hackathon2022:/app/gateway/plugins/hackathon_solution --name uegos -d uegos
 ```
 
 If you are on Linux or Mac:
 ``` shell
 docker load --input uegos-docker-image.tar
+```
+``` shell
 docker run -e MONGO_INITDB_ROOT_USERNAME=uegos -e MONGO_INITDB_ROOT_PASSWORD=uegos -e MONGO_INITDB_DATABASE=uegos --name uegos-db -d mongo
+```
+``` shell
 docker run --link uegos-db -p 8080:8080 -v home/you_user_name/hackathon2022:/app/gateway/plugins/hackathon_solution --name uegos -d uegos
 ```
 
