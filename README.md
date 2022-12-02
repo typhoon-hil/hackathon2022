@@ -77,7 +77,7 @@ The user goes to work Monday through Friday and stays at home for the weekend. T
 If the user has to go to work but the car battery is under 50% he is forced to stay at home and car penalties are applied. Note: car penalties are not applied if the user decides to stay at home by himself that day.
 PV power is random each day depending on the weather. Blackouts are random throughout the week.
 
-The electricity price is cheap from 23h to 7h, and it has a value of 2$. Otherwise, it has an expensive tariff, which value is 7$. The selling (feed-in) price is better from 13h to 15h and has a value of 5$. Otherwise, it is low, and it has a price of 2$.
+The electricity price is cheap from 23h to 7h, and it has a value of 2 RSD. Otherwise, it has an expensive tariff, which value is 7 RSD. The selling (feed-in) price is better from 13h to 15h and has a value of 5 RSD. Otherwise, it is low, and it has a price of 2 RSD.
 
 Input data are stored in *systemData* and they are:
  'car_plugged' : 0 or 1,
@@ -87,13 +87,13 @@ Input data are stored in *systemData* and they are:
  'expected_load2', 
  'actual_load1',
  'actual_load2',
- 'electricity_price': 2$ or 7$,
- 'feed_in_price': 2$ or 5$,
+ 'electricity_price': 2 RSD or 7 RSD,
+ 'feed_in_price': 2 RSD or 5 RSD,
  'car_load',
  'grid_intake',
- 'load1_penalty': 45$,
- 'load2_penalty': 105$,
- 'car_penalty': 1600$,
+ 'load1_penalty': 45 RSD,
+ 'load2_penalty': 105 RSD,
+ 'car_penalty': 1600 RSD,
  'pv_power'.
   
  Data values that omitted can be read from diagrams on the hackathon board.
